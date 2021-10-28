@@ -1,0 +1,35 @@
+eureka:
+  client:
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: https://erp-eureka.herokuapp.com/eureka/
+  instance:
+    hostname: erp-eureka.herokuapp.com
+    nonSecurePort: 80
+logging:
+  file:
+    name: C:\logs\springboot.log
+  level:
+    root: INFO
+    tn:
+      esprit:
+        repository: INFO
+        service: INFO
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} - %-5level - %logger{36} - %msg%n'
+server:
+  port: 8081
+spring:
+  application:
+    name: candidat-microservice
+  datasource:
+    password: ${password:''}
+    url: jdbc:mysql://${db_url:localhost}:3306/${db:recruteur_microservice}?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: ${username:root}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
