@@ -21,7 +21,7 @@ server:
   port: 8081
 spring:
   application:
-    name: candidat-microservice
+    name: recruteur-microservice
   datasource:
     password: ${password:''}
     url: jdbc:mysql://${db_url:localhost}:3306/${db:recruteur_microservice}?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
